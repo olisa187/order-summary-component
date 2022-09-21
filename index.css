@@ -1,0 +1,159 @@
+:root{
+	box-sizing: border-box;
+	
+	
+	/* ### Primary */
+	--clr-Pale-blue: hsl(225, 100%, 94%);
+	--clr-Bright-blue: hsl(245, 75%, 52%);
+	/* ### Neutral */
+	--clr-Very-pale-blue: hsl(225, 100%, 98%);
+	--clr-Desaturated-blue: hsl(224, 23%, 55%);
+	--clr-Dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after{
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+img,
+image,
+picture{
+	max-width: 100%;
+}
+
+body{
+	font-family: 'Red Hat Display', sans-serif;
+	background: var(--clr-Pale-blue) url("images/pattern-background-mobile.svg") no-repeat;
+	line-height: 1.8;
+}
+
+main{
+	max-width: 90em;
+	margin: 0 auto;
+	padding:  4em 1em 2em 1em;
+}
+
+.card{
+	max-width: 23em;
+	margin-inline: auto;
+	text-align: center;
+	border-radius: 1em;
+	overflow: hidden;
+}
+
+.card > .card-content{
+	background-color: #fff;
+	padding: 1.5em;
+	margin-top: -9px;
+}
+
+.card > .card-content > * + *{
+	margin-top: 1.2em;
+}
+
+.card > .card-content > .card-content_music{
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+	
+	background-color: var(--clr-Very-pale-blue);
+	opacity: .6;
+	border-radius: 1em;
+	padding: 1em;
+}
+
+.card > .card-content > .card-content_music > *:last-child{
+	margin-left: auto;
+}
+.right > a{
+	color: var(--clr-Bright-blue);
+	font-weight: 900;
+	font-size: 14px;
+}
+
+.right > a:hover,
+.right > a:active{
+	text-decoration: none;
+}
+
+.music-plan > h4{
+	/* color: var(--clr-Bright-blue); */
+	font-weight: 900;
+	font-size: .9rem;
+}
+.music-plan > span, 
+.btn,
+.order-cancle{
+	display: block;
+}
+
+.music-plan > span{
+	text-align: left;
+	color: var(--clr-Dark-blue)
+}
+
+.card > .card-content >.btn{
+	background-color: var(--clr-Bright-blue);
+	color: #fff;
+	font-weight: 700;
+	margin: 2em auto 0;
+	padding: 1em;
+	width: 100%;
+	border: 0;
+	border-radius: .5em;
+	cursor: pointer;
+	box-shadow: -5px 15px 20px -5px hsla(224, 23%, 55%, .5);
+}
+
+
+.card > .card-content >.btn:hover, 
+.card > .card-content >.btn:active{
+	opacity: .7;
+}
+
+a.order-cancle{
+	text-decoration: none;
+	color: var(--clr-Desaturated-blue);
+	font-weight: 700;
+}
+
+a.order-cancle:hover,
+a.order-cancle:active{
+	color: var(--clr-Dark-blue)
+}
+
+
+.attribution { 
+	font-size: 11px; text-align: center;
+	margin-bottom: 2em;
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%);
+	text-decoration: none;	
+}
+
+@media (min-width: 500px){
+	body{
+		background-size: contain;
+	}
+	
+}
+
+@media (min-width: 23.5em){
+	body{
+		background-image: url("images/pattern-background-desktop.svg");
+		background-repeat: no-repeat;
+	}
+	
+	main{
+		padding-top: 10em;	
+	}
+	
+	.music-plan > h4{
+		font-size: 1rem;
+	}
+}
